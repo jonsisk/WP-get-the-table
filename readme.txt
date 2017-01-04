@@ -11,6 +11,8 @@ Shortcode usage:
 	
 Revision history:
 -----------------
+1.2 Added tablesorter js and css to plugin codebase
+
 1.1 Added verification and error handling for bad URL/ID and tablesorter option
 
 1.0 Initial Release
