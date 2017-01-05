@@ -3,7 +3,7 @@
 Plugin Name: WP Get The Table
 Plugin URI: http://www.itjon.com/getthetable
 Description: A plugin that lets you grab a live HTML table from a URL by ID, and echo it out onto a page via shortcode. Usage: <strong>[getthetable url="page url" id="table id"]</strong>
-Version: 1.3.1
+Version: 1.3.2
 Author: Jonathan Sisk
 Author URI: http://www.itjon.com
 License: GPL2
@@ -52,14 +52,9 @@ function jns_get_the_table_init() {
 				wp_enqueue_style('tablesorter_style', plugin_dir_url(__FILE__) . 'tablesorter/style.css');
 				wp_enqueue_script('tablesorter', plugin_dir_url(__FILE__) . 'tablesorter/jquery.tablesorter.min.js',array(),false,true);
 
-				function tablesort_the_table() {
-					echo "<script>jQuery(document).ready(function(){jQuery('#" .  $atts['id'] . "').tablesorter()})</script>";
-				}
-
-				add_action('wp_footer','tablesort_the_table');
-
 				echo $table[0];
-
+				echo "<script>jQuery(document).ready(function(){jQuery('#" .  $atts['id'] . "').tablesorter()})</script>";				
+				
 			} else {
 
 				//return the table
