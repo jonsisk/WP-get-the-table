@@ -3,7 +3,7 @@
 Plugin Name: WP Get The Table
 Plugin URI: http://www.itjon.com/getthetable
 Description: A plugin that lets you grab a live HTML table from a URL by ID, and echo it out onto a page via shortcode. Usage: <strong>[getthetable url="page url" id="table id"]</strong>
-Version: 1.2
+Version: 1.3
 Author: Jonathan Sisk
 Author URI: http://www.itjon.com
 License: GPL2
@@ -28,6 +28,11 @@ function jns_get_the_table_init() {
 
 			$page = curl_exec($ch);
 
+		}
+
+		//debug mode echos out page that was cURLed
+		if($atts['debug'] == '1') {
+			echo $page;
 		}
 
 		//find the table with matching ID
