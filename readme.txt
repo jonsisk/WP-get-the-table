@@ -6,11 +6,13 @@ Upload and activate the plugin to enable the shortcode.
 Shortcode usage:
 ----------------
 	[getthetable url="" id=""] - Basic Format
-	[getthetable url="http://www.itjon.com/getthetable" id="getthetable"] - This will grab the sample table off the plugin page
-	[getthetable url="http://www.itjon.com/getthetable" id="getthetable" tablesorter] - The tablesorter argument adds the tablesorter js and css from cdn.ucb.org.br and applies it to your table
+	[getthetable url="http://www.itjon.com/getthetable" id="getthetable" mobile="600"] - This will grab the sample table off the plugin page, with mobile version <600px width
+	[getthetable url="http://www.itjon.com/getthetable" id="getthetable" mobile="600" tablesorter] - The tablesorter argument adds the tablesorter js and css from cdn.ucb.org.br and applies it to your table
 	
 Revision history:
 -----------------
+1.4 Added tablesorter images, moved css to function and js to own directoriy, added stacktable js for mobile and mobile breakpoint option
+
 1.3.1 Styled debug output
 
 1.3 Added debug mode
